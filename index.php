@@ -3,7 +3,7 @@
 	$newcity = filter_input(INPUT_POST, "newcity", FILTER_SANITIZE_STRING);
 	$countrycode = filter_input(INPUT_POST, "countrycode", FILTER_SANITIZE_STRING);
 	$district = filter_input(INPUT_POST, "district", FILTER_SANITIZE_STRING);
-	$population = filter_input(INPUT_POST, "population", FILTER_SANITIZE_STRING);
+	$newpopulation = filter_input(INPUT_POST, "population", FILTER_SANITIZE_STRING);
 
 	// GET METHODE
 	$city = filter_input(INPUT_GET, "city", FILTER_SANITIZE_STRING);
