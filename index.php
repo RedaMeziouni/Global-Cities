@@ -24,7 +24,7 @@
 	<!-- Main -->
 	<main>
 		<header>
-			<h1>Simple Form using PDO</h1>
+			<h1>Enter Your City</h1>
 		</header>
 
 		<!-- Checking the deleted var -->
@@ -38,7 +38,7 @@
 		<?php if(!$city && !$newcity) { ?>
 		<!-- First Section -->
 			<section>
-				<h2>Select DATA / Read DATA</h2>
+				<h2>Select / Read DATA</h2><br>
 				<form action="." method="GET">
 					<label for="city">City Name: </label>
 					<input type="text" name="city" id="city" required>
@@ -47,7 +47,7 @@
 			</section>
 			<!-- Second Section -->
 			<section>
-				<h2>Insert DATA / Create DATA</h2>
+				<h2>Insert / Create DATA</h2><br>
 				<form action="." method="POST">
 				<!-- City Name -->
 					<label for="newcity">City Name: </label>
