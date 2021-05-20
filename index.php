@@ -17,8 +17,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Simple Form</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Simple Form</title>
 </head>
 <body>
 	<!-- Main -->
@@ -39,7 +39,7 @@
 		<!-- First Section -->
 			<section>
 				<h2>Select DATA / Read DATA</h2>
-				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="GET">
+				<form action="." method="GET">
 					<label for="city">City Name: </label>
 					<input type="text" name="city" id="city" required>
 					<button>SUBMIT</button>
@@ -48,7 +48,7 @@
 			<!-- Second Section -->
 			<section>
 				<h2>Insert DATA / Create DATA</h2>
-				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+				<form action="." method="POST">
 				<!-- City Name -->
 					<label for="newcity">City Name: </label>
 					<input type="text" name="newcity" id="newcity" required>
@@ -150,7 +150,7 @@
 				<p>Sorry, no results !</p>
 			<?php } ?>
 			<!-- Back to the Home Pgae -->
-				<a href="<?php echo $_SERVER['PHP_SELF']; ?>">Go to the Request Form</a>
+				<a href=".">Go to the Request Form</a>
 		<?php } ?>
 	</main>
 </body>
