@@ -103,7 +103,10 @@
 							$population = $result['Population'];
 						}
 					?>
-					
+					<!-- Delete Form -->
+					<form action="delete_record.php" method="POST" class="delete"></form>
+						<input type="hidden" name="id" value="<?php echo $id; ?>">
+						<button class="red">DELETE</button>
 				</section>
 			<?php } else { ?>
 				<p>Sorry, no results !</p>
