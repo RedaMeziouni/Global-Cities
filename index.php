@@ -9,9 +9,14 @@
 	$city = filter_input(INPUT_GET, $city, FILTER_SANITIZE_STRING);
 ?>
 
+
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Simple Form</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
