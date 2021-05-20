@@ -21,6 +21,15 @@
 		<header>
 			<h1>Simple Form using PDO</h1>
 		</header>
+
+		<!-- Checking the deleted var -->
+		<?php 
+			if(isset($deleted)) {
+				echo "Record Deleted.<br><br>";
+			} elseif (isset($updated)) {
+				echo "Record Updated.<br><br>";
+			}
+		?>
 		<?php if(!$city && !$newcity) { ?>
 		<!-- First Section -->
 			<section>
