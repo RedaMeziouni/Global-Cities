@@ -1,12 +1,12 @@
 <?php 
 	// POST METHODE
-	$newcity = filter_input(INPUT_POST, $newcity, FILTER_SANITIZE_STRING);
-	$countrycode = filter_input(INPUT_POST, $countrycode, FILTER_SANITIZE_STRING);
-	$district = filter_input(INPUT_POST, $district, FILTER_SANITIZE_STRING);
-	$population = filter_input(INPUT_POST, $population, FILTER_SANITIZE_STRING);
+	$newcity = filter_input(INPUT_POST, "newcity", FILTER_SANITIZE_STRING);
+	$countrycode = filter_input(INPUT_POST, "countrycode", FILTER_SANITIZE_STRING);
+	$district = filter_input(INPUT_POST, "district", FILTER_SANITIZE_STRING);
+	$population = filter_input(INPUT_POST, "population", FILTER_SANITIZE_STRING);
 
 	// GET METHODE
-	$city = filter_input(INPUT_GET, $city, FILTER_SANITIZE_STRING);
+	$city = filter_input(INPUT_GET, "city", FILTER_SANITIZE_STRING);
 ?>
 
 
@@ -115,7 +115,7 @@
 							$countrycode = $result['CountryCode'];
 							$district = $result['District'];
 							$population = $result['Population'];
-						}
+						// }
 					?>
 					<!-- Update Form -->
 					<form action="update_record.php" method="POST" class="update">
@@ -143,6 +143,8 @@
 						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						<button class="red">DELETE</button>
 					</form>
+					<!-- End forEach -->
+					<?php } ?>
 				</section>
 			<?php } else { ?>
 				<p>Sorry, no results !</p>
