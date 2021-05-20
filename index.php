@@ -103,14 +103,38 @@
 							$population = $result['Population'];
 						}
 					?>
+					<!-- Update Form -->
+					<form action="update_record.php" method="POST" class="update">
+						<input type="hidden" name="id" value="<?php echo $id; ?>">
+
+						<!-- City Name -->
+						<label for="city-<?php echo $id; ?>">City Name: </label>
+						<input type="text" id="city-<?php echo $id; ?>" name="city" value="<?php echo $city; ?>" required>
+
+						<!-- Country Code -->
+						<label for="countrycode-<?php echo $id; ?>">Country Code: </label>
+						<input type="text" id="countrycode-<?php echo $id; ?>" name="countrycode" value="<?php echo $countrycode; ?>" required>
+
+						<!-- District -->
+						<label for="district-<?php echo $id; ?>">District: </label>
+						<input type="text" id="district-<?php echo $id; ?>" name="district" value="<?php echo $district; ?>" required>
+
+						<!-- Population -->
+						<label for="population-<?php echo $id; ?>">Population: </label>
+						<input type="text" id="population-<?php echo $id; ?>" name="population" value="<?php echo $population; ?>" required>
+						<button>UPDATE</button>
+					</form>
 					<!-- Delete Form -->
-					<form action="delete_record.php" method="POST" class="delete"></form>
+					<form action="delete_record.php" method="POST" class="delete">
 						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						<button class="red">DELETE</button>
+					</form>
 				</section>
 			<?php } else { ?>
 				<p>Sorry, no results !</p>
 			<?php } ?>
+			<!-- Back to the Home Pgae -->
+				<a href="<?php echo $_SERVER['PHP_SELF']; ?>">Go to the Request Form</a>
 		<?php } ?>
 	</main>
 </body>
