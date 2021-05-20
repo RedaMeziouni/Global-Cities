@@ -56,6 +56,23 @@
 			<?php require('database.php'); ?>
 
 			<?php 
+				// Insert to cityT
+				if ($newcity) {
+					$query = 'INSERT INTO city 
+					(Name, CountryCode, District, Population) 
+					VALUES (:newcity, :countrycode, :district, :newpopulation';
+
+					$statement = $db->prepare($query);
+					$statement->bindValue(':newcity', $newcity);
+					$statement->bindValue(':countrycode', $countrycode);
+					$statement->bindValue(':district', $district);
+					$statement->bindValue(':newpopulation', $newpopulation);
+
+					$statement->execute();
+					$statement->closeCursor();
+				}
+
+				// Read the cityT
 				if ($city || $newcity) {
 					$query = 'SELECT * FROM city 
 					WHERE Name = :city 
@@ -72,6 +89,25 @@
 					$statement->closeCursor();
 				}
 			?>
+
+			<!-- Working with the results -->
+			<?php if (!empty($results)) { ?>
+				<section>
+					<h2>Update DATA / Delete DATA</h2>
+					<?php 
+						foreach($results as $result) {
+							$id = $result['ID'];
+							$city = $result['Name'];
+							$countrycode = $result['CountryCode'];
+							$district = $result['District'];
+							$population = $result['Population'];
+						}
+					?>
+					
+				</section>
+			<?php } else { ?>
+				<p>Sorry, no results !</p>
+			<?php } ?>
 		<?php } ?>
 	</main>
 </body>
